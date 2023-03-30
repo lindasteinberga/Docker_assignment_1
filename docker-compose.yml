@@ -8,3 +8,10 @@ services:
       MYSQL_DATABASE: example
       MYSQL_USER: sgt
       MYSQL_PASSWORD: sgt2023
+
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
